@@ -1,0 +1,76 @@
+
+@import '../../../helpers/styles/constants.scss';
+@import '../../../helpers/styles/mixins.scss';
+
+.input,.select{
+    width: 100%;
+    // border: 1px solid #0F248F33 !important;
+    border-radius: 8px !important;
+    transition: all 0.2s !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+    outline: none;
+    
+    .MuiInputBase-root{
+        input{
+        padding: 10px !important ;
+        outline: none !important;
+        }
+    
+    }
+  }
+
+  .input:focus ,.select:focus,.textarea:focus{
+    border: 2px solid #4d8fce !important;
+    box-shadow: 1px 2px 6px #eee !important;
+  }
+
+.textarea{
+    width: 100%;
+    border: 1px solid #0F248F33 !important;
+    border-radius: 8px !important;
+    transition: all 0.2s !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+    padding: 10px;
+   
+
+    .MuiInputBase-root{
+        input{
+        padding: 10px !important ;
+        outline: none !important;
+        }
+    
+    }
+}
+
+.error{
+  border: 1px solid $red !important;
+  background: rgba(248, 157, 157, 0.119);
+}
+
+.error-text{
+  color: $red;
+  margin-bottom: 0px;
+}
+
+.calenderBox{
+  border-radius: 5px !important;
+  margin-top: 5px !important;
+  border: 1px solid #eee !important;
+  box-shadow: 1px 2px 6px #eee !important;
+}
+
+.inputPick{
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #0C239B33;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  height: 35px;
+  
+
+}
+.date-input{
+  outline: none !important;
+  border: none !important;
+}

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "store/*": ["src/store-redux/*"]
+    }
+  },
+  "include": ["src"]
+}

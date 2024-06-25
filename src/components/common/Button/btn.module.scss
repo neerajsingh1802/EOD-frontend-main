@@ -1,0 +1,26 @@
+@import '../../../helpers/styles/mixins.scss';
+
+.button {
+  background-color: #0F248F;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px 20px;
+  min-height: 30px;
+  outline-width: 0px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include Responsive("mobile"){
+    padding: 2px 10px;
+    font-size: 14px;
+  }
+  &:hover,&:focus{
+    transform: scale(1.02);
+    outline-width: 0px;
+  }
+}

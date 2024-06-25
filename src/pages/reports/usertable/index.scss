@@ -1,0 +1,54 @@
+.user-table {
+  margin-top: 20px;
+  padding: 20px;
+  // background-color: #f0f0f0;
+  background-color:#fff ;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background-color:  #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    td {
+      font-size: 14px;
+    }
+  }
+}
+
+
+// Profile image
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -1,0 +1,513 @@
+@import "./helpers/styles/mixins.scss";
+@import "./helpers/styles/constants.scss";
+
+@include Spacings;
+@include Sizing;
+@include Opacity;
+@include HWs;
+
+body {
+  background-color: $bg_gray;
+}
+
+.app {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-0 {
+  padding: 0px !important;
+}
+
+.p-0--mob {
+  @include Responsive("mobile") {
+    padding: 0px !important;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-reverse {
+  display: flex;
+  flex-direction: row-reverse !important;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch !important;
+}
+
+.items-right {
+  align-items: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+
+.justify-start {
+  justify-content: start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-colOnMob {
+  display: flex;
+
+  @include Responsive("mobile") {
+    flex-direction: column;
+  }
+}
+
+.fs-14--noMob {
+  font-size: 14px !important;
+
+  @include Responsive("mobile") {
+    font-size: 12px !important;
+    letter-spacing: -0.6px;
+  }
+}
+
+.hover-scale {
+  cursor: pointer;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.link {
+  color: #498cce;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    transform: scale(1.002);
+  }
+}
+
+.c-primary {
+  color: $primary;
+}
+
+
+
+.c-white {
+  color: white !important;
+}
+
+.c-error {
+  color: $red;
+}
+
+.c-success {
+  color: $success;
+}
+
+.c-gray {
+  color: #8E8E8E !important;
+}
+
+.c-warning {
+  color: $yellow;
+}
+
+.bg-primary {
+  background-color: $primary  !important;
+}
+ 
+.bg-gray {
+  background-color: $bg_gray;
+}
+
+.bg-primary--opaque {
+  background-color: $blue_opaque;
+}
+
+.bg-green--opaque {
+  background-color: $green_opaque;
+}
+
+.bg-red--opaque {
+  background-color: $red_opaque;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-darkgray{
+  background-color: $darkgray;
+}
+
+.bg-error{
+  background-color: $red;
+}
+
+.bg-purple{
+  background-color: $purple;
+}
+.underline {
+  text-decoration: underline;
+  text-underline-position: below;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+
+.small {
+  font-size: small;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.w-80p {
+  width: 80%;
+}
+
+.w-90p {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.h-full {
+  height: 100% !important;
+}
+
+.h-auto {
+  height: fit-content !important;
+  min-height: fit-content !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+button {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+}
+
+.bordered .MuiSelect-icon {
+  width: 0.8em !important;
+  margin-right: 10px !important;
+  height: 0.8em !important;
+  color: black !important;
+  border: 2px solid black !important;
+  border-radius: 100% !important;
+}
+
+.question-mark {
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  background: #444444;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  border-radius: 100%;
+
+  &.responsive {
+    @include Responsive("tab") {
+      display: none;
+    }
+  }
+}
+
+.pt-header {
+  padding-top: 60px;
+}
+
+.mt-header {
+  margin-top: 75px !important;
+}
+
+.border-t1 {
+  border-top: 1px solid #eee;
+}
+
+.column-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.leading-tight {
+  line-height: 90%;
+}
+
+.tracking-tight {
+  letter-spacing: -0.5px !important;
+}
+
+.tracking-tighter {
+  letter-spacing: -1px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+.banner-container {
+  height: 329px;
+  width: 100vw;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.text-truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 98%;
+}
+
+.object-cover {
+  object-fit: cover !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflowY-hidden {
+  overflow-y: hidden !important;
+}
+
+.overflowY-auto {
+  overflow-y: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+
+  @include Responsive("tab") {
+    width: 95%;
+  }
+}
+
+.container-big {
+  width: 98%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.border {
+  border: 1px solid #eee;
+}
+
+.border-b {
+  border-bottom: 1px solid #eee;
+}
+
+.border-l {
+  border-left: 1px solid #eee;
+}
+
+.border-t {
+  border-top: 1px solid #eee;
+}
+
+.border-r {
+  border-right: 1px solid #eee;
+}
+
+.border-dashed {
+  border: 2px dashed #eee !important;
+}
+
+.bg-primary-shadow{
+  background: #0C239B1A;
+}
+
+.small-table {
+  @include Responsive("mobile") {
+    th {
+      font-size: 12px !important;
+      white-space: nowrap;
+    }
+
+    td {
+      font-size: 10px !important;
+    }
+  }
+}
+
+.ghostInput {
+  border: none;
+  outline-width: 0px;
+
+  &:focus {
+    border: none;
+    outline-width: 0px;
+  }
+}
+
+.rounded-4 {
+  border-radius: 4px !important;
+}
+
+.MuiFormControlLabel-label{
+  width: 100%;
+}
+
+// .App {
+//   text-align: center;
+// }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,178 @@
+@import "../../helpers/styles/mixins.scss";
+@import "../../helpers/styles/constants.scss";
+
+
+.auth {
+  height: fit-content;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 0;
+  padding: 60px 0px 0px 0px;
+}
+
+.auth-innerContainer {
+  max-width: 1500px;
+  min-height: 100%;
+  margin: auto auto;
+  display: flex;
+  overflow-y: auto;
+  align-items: stretch;
+  justify-content: space-evenly;
+
+  &.auto {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  @include Responsive("tab") {
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    height: auto;
+    overflow-x: hidden;
+  }
+}
+
+.slider-class {
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include Responsive("tab") {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
+.auth-card {
+  width: 500px;
+  max-width: 30vw;
+  height: auto;
+  background: white;
+  margin: auto;
+  border-radius: 25px !important;
+  max-height: 1000px;
+  min-height: 54vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: space-between;
+  padding: 20px 0;
+
+  &.scroll {
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+  @include Responsive("tab") {
+    max-width: 90%;
+    height: auto !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    max-height: 100%;
+    margin: 50px auto;
+    border-radius: 10px;
+  }
+}
+
+.auth-card>img {
+  height: 45px;
+  width: auto;
+}
+
+.radio-grid {
+  margin: 20px 0;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 2;
+  column-gap: 5%;
+
+  span {
+    white-space: nowrap;
+  }
+}
+
+.nextback__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 60px auto 20px auto;
+  margin-top: auto;
+  padding-top: 25px;
+  margin-bottom: 30px;
+
+  button.back {
+    margin-right: 2px;
+  }
+
+  button.next {
+    margin-left: 2px;
+    width: fit-content;
+    max-width: 150px;
+  }
+}
+
+.onboarding__btnGrid {
+  width: max(70%, 350px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+
+  @include Responsive("mobile") {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid $blue;
+    font-weight: 500;
+    outline-width: none;
+    background: transparent;
+    margin-top: 15px;
+    font-size: 15px;
+    white-space: nowrap !important;
+
+    @include Responsive("mobile") {
+      font-size: 14px;
+      letter-spacing: -0.5px;
+    }
+
+    &.selected {
+      background-color: $blue;
+      color: white;
+      border: none;
+    }
+
+    &:focus {
+      outline-width: none;
+    }
+  }
+}
+
+.otp-input {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  border: 1px solid #dadada;
+  font-size: 24px;
+
+  :focus {
+    border-color: $blue;
+    outline-color: $blue;
+  }
+
+  @include Responsive("mobile") {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+  }
+}
